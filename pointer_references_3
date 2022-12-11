@@ -1,0 +1,17 @@
+#include <iostream>
+#include <typeinfo>
+using namespace std;
+
+int main()
+{
+	int x = 1,
+		y = 2,
+		z = 3;
+	int& x_ref = x,
+		 y_ref = y,
+		 z_ref = z;
+	int ref[]{x_ref, y_ref, z_ref};
+	cout << "The array holds " << end(ref) - begin(ref) << " value(s) i.e. "
+	<< ref[0] << ", " << ref[1] << " and " << ref[2] << endl;
+	return 0;
+};
