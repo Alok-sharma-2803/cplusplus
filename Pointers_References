@@ -1,0 +1,81 @@
+#include <iostream>
+#include <typeinfo>
+using namespace std;
+
+int main()
+{
+//	Create 5 different variables of different data types. Output each of their values and addresses
+	int x1 = 1;
+	float x2 = 1.13456;
+	double x3 = 1.2345678912345678;
+	char x4 = 'a';
+	bool x5 = true;
+	
+	cout << "data type is " << typeid(x1).name() << " holding the value " << x1 << ". It's stored at " << &x1 << endl;
+	cout << "data type is " << typeid(x2).name() << " holding the value " << x2 << ". It's stored at " << &x2 << endl;
+	cout << "data type is " << typeid(x3).name() << " holding the value " << x3 << ". It's stored at " << &x3 << endl;
+	cout << "data type is " << typeid(x4).name() << " holding the value " << x4 << ". It's stored at " << (void*)&x4 << endl;
+//	Note: For char, the address of operator seems to be failing. Instead of printing the address, it starts printing the values from the defined variable in the memory till the time it encounters a null value.
+	cout << "data type is " << typeid(x5).name() << " holding the value " << x5 << ". It's stored at " << &x5 << endl;
+	cout << '\n';
+	
+//	Create 5 different variables of different data types. Create 5 different pointers to those variables. Output each value they point to and the pointers themselves.
+
+	int* p1 = &x1;
+	float* p2 = &x2;
+	double* p3 = &x3;
+	char* p4 = &x4;
+	bool* p5 = &x5;
+	
+	cout << "The pointer P1 holds the memory address " << p1 << " and points to the value " << *p1 << endl;
+	cout << "The pointer P2 holds the memory address " << p2 << " and points to the value " << *p2 << endl;
+	cout << "The pointer P3 holds the memory address " << p3 << " and points to the value " << *p3 << endl;
+	cout << "The pointer P4 holds the memory address " << (void*)p4 << " and points to the value " << *p4 << endl;
+	cout << "The pointer P5 holds the memory address " << p5 << " and points to the value " << *p5 << endl;
+	cout << '\n';
+	
+//	Create 3 different variables of the same data type. Create 3 reference variables to the previous variables and store them in an array. Output the values in the array.
+	int x = 1,
+		y = 2,
+		z = 3;
+
+	int& x_ref = x,
+		 y_ref = y,
+		 z_ref = z;
+
+	int ref[]{x_ref, y_ref, z_ref};
+
+	cout << "The defined array holds " << end(ref) - begin(ref) << " value(s) i.e. " << ref[0] << ", " << ref[1] << " and " << ref[2] << endl;
+	cout << '\n';
+	
+//	Create a char variable and output its value using both & and * in front of it.
+	char c = 'a';
+	cout << *&c << '\n' << endl;
+	
+//	Create a one int array. Output the value within the array using both the [0] and the * methods.
+	int d[1]{5};
+	cout << *d << ' ' << d[0] << '\n' << endl;
+	
+//	Create a 5 item array. Output each of the addresses of the items by adding ints to the original array variable
+	char e[5]{'a', 'b', 'c', 'd', 'e'};
+	cout << "The memory address for " << e[0] << " is " << &e << ", " << e[1] << " is " << &e + 1 << ", " << e[2] << " is " << &e + 2 << ", " << e[3] << " is " << &e + 3 << " and " << e[4] << " is " << &e + 4 << ".\n" << endl;
+	
+//	Create a pointer that points to an array of five ints. Then output to see the current value it's pointing to (using cout and *). Then on the next line use the increment operator (++) on the pointer. Finally output it's value again.
+	int f[]{1,2,3,4,5};
+	int* f_pointer = f;
+	
+	cout << *f_pointer << '\n' << endl;
+	f_pointer++;
+	cout << *f_pointer << '\n' << endl;
+	
+//	Create a pointer that points to the last item in a five int array. Output the value at its address. Then use the Decrement operator (--) to go up the array by one item. Finally, output the value at the pointer's new address.
+	int g[5]{6,7,8,9,10};
+	int* g_pointer = &g[4];
+	
+	cout << g_pointer << ' ' << *g_pointer << '\n' << endl;
+	g_pointer--;
+	cout << g_pointer << ' ' << *g_pointer << '\n' << endl;
+	
+	
+	return 0;
+};
