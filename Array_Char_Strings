@@ -1,0 +1,84 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+//	Create an int array with min/max int values
+	int array_1[]{INT_MIN, INT_MAX};
+	cout << array_1[0] << endl;
+	cout << array_1[1] << endl;
+	
+//	Create a double array with 5 double values
+	double array_2[]{2.3454, 4.5643323453547645678578, 3.45,2,2.1};
+	cout << array_2[0] << endl;
+	cout << array_2[1] << endl;
+	cout << array_2[2] << endl;
+	cout << array_2[3] << endl;
+	cout << array_2[4] << endl;
+	
+//	Create an array of size 1, then set its value
+
+	int array_3[1];
+	array_3[0] = 2;
+	cout << array_3[0] << endl;
+	
+//	Create a 2d array of characters, asigning them values 'a' through 'i'
+	char array_4[3][3];
+	array_4[0][0] = 'a';
+	array_4[0][1] = 'b';
+	array_4[0][2] = 'c';
+	array_4[1][0] = 'd';
+	array_4[1][1] = 'e';
+	array_4[1][2] = 'f';
+	array_4[2][0] = 'g';
+	array_4[2][1] = 'h';
+	array_4[2][2] = 'i';
+	cout << array_4[0][0] << endl;
+	cout << array_4[0][1] << endl;
+	cout << array_4[0][2] << endl;
+	cout << array_4[1][0] << endl;
+	cout << array_4[1][1] << endl;
+	cout << array_4[1][2] << endl;
+	cout << array_4[2][0] << endl;
+	cout << array_4[2][1] << endl;
+	cout << array_4[2][2] << endl;
+	
+//	create a int 3d array with assigned values of 1-8;
+	int array_5[2][2][2];
+	array_5[0][0][0] = 1;
+	array_5[0][0][1] = 2;
+	array_5[0][1][0] = 3;
+	array_5[0][1][1] = 4;
+	array_5[1][0][0] = 5;
+	array_5[1][0][1] = 6;
+	array_5[1][1][0] = 7;
+	array_5[1][1][1] = 8;
+	cout << array_5[0][0][0] << endl;
+	cout << array_5[0][0][1] << endl;
+	cout << array_5[0][1][0] << endl;
+	cout << array_5[0][1][1] << endl;
+	cout << array_5[1][0][0] << endl;
+	cout << array_5[1][0][1] << endl;
+	cout << array_5[1][1][0] << endl;
+	cout << array_5[1][1][1] << endl;
+	
+//	Create a character array with your name
+	char* name = "Alok";
+	cout << "My name is " << name << "!" << endl;
+	
+//	Create a character array with only special characters
+	char special_char[] {'!', '@', '#', '%'};
+	cout << "The defined array contains " << end(special_char) - begin(special_char) << " element(s) i.e. " << special_char[0] << ", " << special_char[1] << ", " << special_char[2] << " and " << special_char[3] << endl;
+	
+//	Create two strings called food1, food2 with values "soup" and "salad", and swap them
+	string food1 = "soup";
+	string food2 = "salad";
+	
+	cout << "Before swapping, food1 variable had " << food1 << " and food2 variable had " << food2 << ".";
+	
+	food1.swap(food2);
+	
+	cout  << " Now, food1 has " << food1 << " and food2 has " << food2 << "." << endl;
+	return 0;
+};
