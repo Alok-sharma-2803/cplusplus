@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+//	Output a math operation that uses +, -, *, /, (), and %
+	cout << ((((8+7)-6)*100)/4)%3 << endl;
+	
+//	Create an output that uses ==, <, >, <=, >= in a single line
+	cout << ((5 < 4 == 4 > 6) == (5 <= 6 == 6 >= 4)) << endl;
+	
+//	Create an output that uses && and || in a single line
+	cout << (((3 == 3.0) && (4 <= 3)) || (5 >= 6)) << endl;
+	
+//	Ask the user to enter three integers within a single line, then store the three entrees using 'cin'
+	int x, y, z;
+	cout << "Please enter three integers in a single line (seperated by 1 space): ";
+	cin >> x >> y >> z;
+	cout << "The three integers you have entered are: " << x << ", " << y << " and " << z << "." << endl;
+	
+//	Ask user to input an int, then output the values one greather and one less than it by incrementing and decrementing.
+	long int x1;
+	cout << "Please input an integer: ";
+	cin >> x1;
+	cout << "The integer you have entered is " << x1 << ". ";
+	x1++;
+	cout << x1 << " is it's immediate incremented value and ";
+	x1--;
+	x1--;
+	cout << x1 << " is it's immediate decremented value." << endl;
+	return 0;
+};
