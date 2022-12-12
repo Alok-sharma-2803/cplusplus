@@ -1,0 +1,86 @@
+#include <iostream>
+#include <typeinfo>
+#include <string>
+using namespace std;
+
+int main()
+{
+//	Create a for loop that prints out 0-10
+	for (int i = 0; i <= 10; i++) {
+		cout << i << endl;
+	}
+	cout << '\n';
+	
+	
+//	Create a for loop that prints out 0-100, but only even numbers
+	for (int i = 0; i <= 100; i+=2){
+		cout << i << endl;
+	}
+	cout << '\n';
+	
+	// Alternative approach
+	
+	for (int i = 0; i <= 100; i++){
+		if (i%2 == 0){
+			cout << i << endl;
+		}
+	}
+	cout << '\n';
+	
+//	Create a for loop that prints out 0-100, but only odd numbers
+	for (int i = 1; i <= 100; i+=2){
+		cout << i << endl;
+	}
+	cout << '\n';
+	
+	// Alternative approach
+	
+	for (int i = 0; i <= 100; i++){
+		if (i%2 != 0){
+			cout << i << endl;
+		}
+	}
+	cout << '\n';
+	
+//	Create a while loop that outputs a char array with one less character everytime it loops until it holds only '\0' values within it.
+	char array_1[]{'a', 'b', 'c', 'd', 'e'};
+	int x = 1;
+	int y = 1;
+	while(x)
+	{
+		cout << array_1[x-1] << ' ';
+		x++;
+		if (x-1 == end(array_1) - begin(array_1))
+		{
+			cout << '\n';
+			x = y + 1;
+			y++;
+			if(y == (end(array_1) - begin(array_1)) + 1)
+			{
+				break;
+			}
+		}
+	};
+	
+	cout << '\n' << endl;
+	
+	
+//	Create a do while loop that only executes once
+	do
+		cout << "do while output 1" << '\n' << endl;
+	while (1 == 2);
+	
+	
+//	Create a nested for loop within another that prints out the product of each iterator ranging from 0-10, creating a times table for 0-100 (HINT: use 'printf("%03d ", i*j);' for output with proper spacing between each item, instead of "cout << i*j << ' ';".)
+	int sample[]{0,1,2,3,4,5,6,7,8,9,10};
+	for (int i = 0; i <= 10; i++)
+	{
+		for (int j = 0; j <= 10; j++)
+		{
+			cout << sample[j] << " * " << sample[i] << " = " << sample[j] * sample[i] << "   ";
+		}
+		cout << '\n' << endl;
+	}
+	
+	return 0;
+};
