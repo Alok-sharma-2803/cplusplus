@@ -27,7 +27,7 @@ int mult_Array(double* pointer, int size, double multiplier)
 
 // Create a 'combine_Arrays' function that takes in two pointers to arrays of the same size and a int parameter for size. Create a loop that adds thes the second array to the first and then sets the seconds values to zero.
 
-int combine_Arrays(int arr_1[], int arr_2[], int size)
+int combine_Arrays(int arr_1[], int arr_2[], int size) 
 {
 	for (int i = 0; i < size; i++)
 	{
